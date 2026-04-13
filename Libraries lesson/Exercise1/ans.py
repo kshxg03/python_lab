@@ -3,9 +3,9 @@ import random
 
 num = random.randint(1, 10)
 
-wrong_count = 0
+loss_count = 0
 
-while wrong_count < 3:
+while loss_count < 3:
     try:
         print("-------------")
         user_guess = int(input("Guess the number: "))
@@ -18,7 +18,7 @@ while wrong_count < 3:
                 print("--Guess lower--")
             elif user_guess < num:
                 print("--Guess higher--")
-            wrong_count += 1
+            loss_count += 1
     except ValueError:
         print("Wrong input!!!")
         break
@@ -27,7 +27,7 @@ while wrong_count < 3:
         break
 
     
-if wrong_count == 3:
+if loss_count == 3:
     print("-------------")
     print("3 attempts used!!!")
     
